@@ -1,0 +1,118 @@
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212120;
+  color: whitesmoke;
+  font-family: "Inconsolata", monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  background-color: #363433;
+  color: whitesmoke;
+  outline: none;
+  font-size: 14px;
+}
+input:focus {
+  background-color: #302e2d;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: #3f704d;
+  border-radius: 8px;
+  box-shadow: 8px 8px #1b1a18;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #568203;
+}
+button:active {
+  background-color: #74c365;
+}
+button:disabled {
+  background-color: #363433 !important;
+}
+
+.chip-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.chip-container {
+  flex: 0 0 25%;
+  min-width: 240px;
+}
+
+.chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #43403e;
+  height: 50px;
+  border-radius: 8px;
+  padding: 0 15px;
+  box-shadow: 8px 8px #1b1a18;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: auto;
+  background-color: #3f704d;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 15px;
+  position: absolute;
+  z-index: 1;
+  right: 130%;
+  box-shadow: 4px 4px #1b1a18;
+}
+.tooltip-text.wrong {
+  background-color: #c3671e !important;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
